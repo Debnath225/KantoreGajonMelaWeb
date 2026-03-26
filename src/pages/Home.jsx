@@ -1,8 +1,10 @@
 import Background from "@/components/common/Background";
 import CTA from "@/components/common/CTA";
+import FAQSection from "@/components/common/FAQSection";
 import Footer from "@/components/common/Footer";
 import Hero from "@/components/common/Hero";
 import Loader from "@/components/common/Loader";
+import Map from "@/components/common/Map";
 import Navbar from "@/components/common/Navbar";
 
 export default function Home() {
@@ -13,6 +15,8 @@ export default function Home() {
       <Navbar />
       <Hero />
       <CTA />
+      <Map />
+      <FAQSection />
       <Footer />
     </>
   );

@@ -17,7 +17,7 @@ function Hero() {
     <div className="min-h-[calc(100vh-32px)] flex items-center justify-center relative">
       <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-purple-900 to-blue-900 opacity-50 blur-[120px]"></div>
       <div className="relative mt-10 px-2 flex items-center justify-center z-10">
-        <div className="grid grid-cols-2 gap-2 grid-row-2 md:grid-cols-5 md:grid-rows-5 md:gap-4 h-[90dvh]">
+        <div className="grid grid-cols-2 gap-2 grid-row-2  md:grid-cols-5 md:grid-rows-5 md:gap-4 h-[90dvh]">
           {/* Video  */}
           <div class="col-span-2 md:col-span-4 md:row-span-5 bg-transparent rounded-3xl overflow-hidden">
             <motion.video
@@ -31,7 +31,7 @@ function Hero() {
             />
           </div>
           {/* Imags */}
-          <div class="col-span-1 md:row-span-3 md:col-start-5 md:row-start-3 bg-transparent rounded-4xl overflow-hidden border-1 border-white/50">
+          <div class="col-span-1  md:row-span-3 md:col-start-5 md:row-start-3 bg-transparent rounded-4xl overflow-hidden border-1 border-white/50">
             <motion.img
               whileHover={{ scale: 1.06, transition: { duration: 0.3 } }}
               src={Mahadev}
