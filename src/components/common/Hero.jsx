@@ -9,7 +9,10 @@ import {
 } from "@/components/ui/carousel";
 import MahadevVideo from "../../assets/videos/Mahadev-Video-row.mp4";
 import imageData from "@/store/imageData.json";
+import Background from "./Background";
+import { Card, CardContent } from "../ui/card";
 function Hero() {
+
   return (
     <div className="min-h-[calc(100vh-32px)] flex items-center justify-center relative">
       <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-purple-900 to-blue-900 opacity-50 blur-[120px]"></div>
@@ -38,42 +41,34 @@ function Hero() {
           </div>
           {/* Imags */}
           <div class="col-span-1 md:row-span-2 md:col-start-5 md:row-start-1 bg-transparent rounded-4xl overflow-hidden border-1 border-white/50">
-            <Carousel
-              opts={{
-                align: "start",
-                loop: true,
-              }}
-              orientation="horizontal"
-              className="w-full h-full max-w-[12rem] sm:max-w-xs flex items-center justify-start gap-4"
-            >
-              <CarouselContent className=" flex aspect-square items-center justify-center p-6">
+            <Carousel onSlideChange={(index) => SetCount(index + 1)}>
+              <CarouselContent >
                 {/* Map through your images and create CarouselItem for each */}
                 {imageData.images.map((image) => (
-                  <CarouselItem key={image.id} className="w-full h-full overflow-hidden rounded-3xl ">
-                    <motion.img
-                      className="object-cover h-full w-full "
-                      alt={image.title}
-                      src={image.url}
-                      whileHover={{
-                        scale: 1.06,
-                        transition: { duration: 0.3 },
-                      }}
-                    />
+                  <CarouselItem key={image.id}>
+                    <Card className="m-px">
+                      <CardContent className="flex aspect-square items-center justify-center rounded-4xl overflow-hidden">
+                        <motion.img
+                          className="object-cover h-full w-full "
+                          alt={image.title}
+                          src={image.url}
+                          whileHover={{
+                            scale: 1.06,
+                            transition: { duration: 0.3 },
+                          }}
+                        />
+                      </CardContent>
+                    </Card>
                   </CarouselItem>
                 ))}
-              </CarouselContent >
+              </CarouselContent>
               <CarouselPrevious />
               <CarouselNext />
             </Carousel>
           </div>
         </div>
       </div>
-      {/* Decorative Elements */}
-      <div className="absolute top-10 left-10 w-32 h-32 bg-linear-60 from-blue-600 to-purple-700 rounded-full blur-[80px] transform -translate-x-1/7 -translate-y-1"></div>
-      <div className="absolute top-10 right-10 w-48 h-48 bg-cyan-700 rounded-full blur-[100px]"></div>
-      <div className="absolute buttom-10 left-10 w-64 h-64 bg-linear-60 from-blue-600 to-purple-700 rounded-full blur-[120px]"></div>
-      {/* <div className="absolute buttom-10 right-10 w-64 h-64 bg-cyan-500 rounded-full blur-[120px] transform -translate-x-1 -translate-y-0"></div> */}
-      <div className="absolute top-1/2 w-64 h-64 bg-red-600 rounded-full blur-[120px] transform -translate-x-1 -translate-y-0"></div>
+      <Background />
     </div>
   );
 }
