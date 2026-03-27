@@ -1,4 +1,5 @@
 import Background from "@/components/common/Background";
+import ContactMe from "@/components/common/ContactMe";
 import CTA from "@/components/common/CTA";
 import FAQSection from "@/components/common/FAQSection";
 import Footer from "@/components/common/Footer";
@@ -17,6 +18,7 @@ export default function Home() {
       <CTA />
       <Map />
       <FAQSection />
+      <ContactMe />
       <Footer />
     </>
   );

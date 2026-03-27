@@ -6,9 +6,9 @@ const AccordionItem = ({ question, answer }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="border-b border-gray-200">
+    <div className="border-b border-b-cyan-400">
       <button
-        className="flex justify-between items-center w-full p-4 text-left focus:outline-none focus:bg-gray-700 transition duration-300 ease-in-out"
+        className="flex justify-between items-center w-full p-4 text-left focus:outline-none focus:bg-gray-900  rounded-xl cursor-pointer transition duration-300 ease-in-out"
         onClick={() => setIsOpen(!isOpen)}
         aria-expanded={isOpen}
         aria-controls={`faq-answer-${question.id}`}
@@ -16,7 +16,7 @@ const AccordionItem = ({ question, answer }) => {
         <span className="text-lg font-medium text-cyan-500/88">{question}</span>
         <motion.span
           animate={{ rotate: isOpen ? 180 : 0 }}
-          transition={{ duration: 0.3 }}
+          transition={{ duration: 0.2 }}
         >
           <ChevronDown className="w-5 h-5 text-emerald-400" />
         </motion.span>

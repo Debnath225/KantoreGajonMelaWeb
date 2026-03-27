@@ -1,20 +1,26 @@
 import { motion } from "framer-motion";
 import { MapPin } from "lucide-react";
+import { useEffect, useState } from "react";
 
 function Map() {
+  // const width =200;
+  const [width, setwidth] = useState(0);
+  useEffect(() => {
+    setwidth(window.innerWidth);
+  }, [width]);
   return (
     <section className="py-16 px-4 md:px-10 bg-gradient-to-b from-black to-gray-900">
       {/* Heading */}
       <motion.div
-        initial={{ opacity: 0, y: -20 }}
+        initial={{ opacity: 0, y: -40 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
-        transition={{ duration: 0.6 }}
+        transition={{ duration: 0.6, ease: "easeIn" }}
         className="text-center mb-10"
       >
-        <h4 className="text-3xl md:text-4xl font-bold text-cyan-400 flex items-center justify-center gap-2">
+        <h4 className="text-2xl sm:text-3xl md:text-4xl font-bold text-cyan-400 flex items-center justify-center gap-2">
           <MapPin className="text-cyan-400" />
-          Located At Kantore Shiv Mandir
+          {width > 480 ? "Located At Kantore Shiv Mandir" : "Get Location"}
         </h4>
         <p className="text-gray-400 mt-2 text-sm md:text-base">
           Visit the sacred place of Mahadev and experience divine peace

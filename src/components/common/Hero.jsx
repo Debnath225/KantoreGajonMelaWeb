@@ -23,7 +23,7 @@ function Hero() {
             <motion.video
               whileHover={{ scale: 1.01, transition: { duration: 0.3 } }}
               src={MahadevVideo}
-              autoPlay
+              // autoPlay
               //   loop
               muted
               playsInline
@@ -68,7 +68,7 @@ function Hero() {
           </div>
         </div>
       </div>
-      <Background />
+      {/* <Background /> */}
     </div>
   );
 }
