@@ -40,7 +40,7 @@ export default function Footer() {
           >
             <h4 className="text-xl text-amber-50 mb-4">Quick Links</h4>
             <ul className="space-y-3">
-              {["Shop", "About Us", "Blog", "Contact"].map((link) => (
+              {["Home", "About Us", "FAQ", "Contact"].map((link) => (
                 <li key={link}>
                   <a
                     href="#"
@@ -61,7 +61,12 @@ export default function Footer() {
           >
             <h4 className="text-xl text-amber-50 mb-4">Support</h4>
             <ul className="space-y-3">
-              {["FAQ", "Shipping", "Returns", "Care Guide"].map((link) => (
+              {[
+                "Privacy Policy",
+                "Terms of Service",
+                "Support",
+                "Care Guide",
+              ].map((link) => (
                 <li key={link}>
                   <a
                     href="#"
