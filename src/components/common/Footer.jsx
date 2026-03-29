@@ -3,26 +3,22 @@ import { Mail, Phone, MapPin } from "lucide-react";
 import FacebookImg from "@/assets/images/facebook.png";
 import InstagramImg from "@/assets/images/instagram.png";
 import TwitterImg from "@/assets/images/twitter.png";
-<<<<<<< HEAD
-import Link from "next/link";
-=======
-import { Link } from "react-router-dom";
->>>>>>> f21f84c430c16fa367bfa4e8143fafc2af0e822b
+import Link from "react-router-dom";
 
 export default function Footer() {
   const date = new Date();
   const quickLinks = [
-    { field: "Shop", link: "#" },
-    { field: "About Us", link: "/about" },
-    { field: "Blog", link: "#faqSection" },
-    { field: "Contact", link: "#contactMe" },
+    { field: "Home", to: "/" },
+    { field: "About Us", to: "/about" },
+    { field: "FAQ", to: "#faqSection" },
+    { field: "Contact", to: "#contactMe" },
   ];
 
   const supportLinks = [
-    { field: "FAQ", link: "#faqSection" },
-    { field: "Shipping", link: "#" },
-    { field: "Returns", link: "#" },
-    { field: "Care Guide", link: "#" },
+    { field: "Privacy Policy", to: "/privacy-policy" },
+    { field: "Terms of Service", to: "/terms-of-service" },
+    { field: "Support", to: "/support" },
+    { field: "Care Guide", to: "/care-guide" },
   ];
 
   return (
@@ -64,9 +60,9 @@ export default function Footer() {
             <h4 className="text-xl text-amber-50 mb-4">Quick Links</h4>
             <ul className="space-y-3">
               {quickLinks.map((elem) => (
-                <li key={elem.link}>
+                <li key={elem.to}>
                   <Link
-                    to={elem.link}
+                    to={elem.to}
                     className="text-amber-200/70 hover:text-amber-400 transition-colors duration-300"
                   >
                     {elem.field}
@@ -86,12 +82,12 @@ export default function Footer() {
             <ul className="space-y-3">
               {supportLinks.map((elem) => (
                 <li key={elem.field}>
-                  <a
-                    href={elem.link}
+                  <Link
+                    to={elem.to}
                     className="text-amber-200/70 hover:text-amber-400 transition-colors duration-300"
                   >
                     {elem.field}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
