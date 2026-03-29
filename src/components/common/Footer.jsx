@@ -3,6 +3,7 @@ import { Mail, Phone, MapPin } from "lucide-react";
 import FacebookImg from "@/assets/images/facebook.png";
 import InstagramImg from "@/assets/images/instagram.png";
 import TwitterImg from "@/assets/images/twitter.png";
+import Link from "next/link";
 
 export default function Footer() {
   return (
@@ -98,6 +99,41 @@ export default function Footer() {
               <li className="flex items-center gap-3 text-amber-200/70">
                 <MapPin className="w-5 h-5 text-amber-500" />
                 <span>Rishikesh, India</span>
+              </li>
+            </ul>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.4 }}
+          >
+            <h4 className="text-xl text-amber-50 mb-4">Explore More</h4>
+            <ul className="space-y-3">
+              <li>
+                <Link
+                  to="/gallery"
+                  className="text-amber-200/70 hover:text-amber-400 transition-colors duration-300"
+                >
+                  Gallery
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/testimonials"
+                  className="text-amber-200/70 hover:text-amber-400 transition-colors duration-300"
+                >
+                  Testimonials
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/events"
+                  className="text-amber-200/70 hover:text-amber-400 transition-colors duration-300"
+                >
+                  Events
+                </Link>
               </li>
             </ul>
           </motion.div>
