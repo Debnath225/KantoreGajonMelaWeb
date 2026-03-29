@@ -1,5 +1,3 @@
-import React from "react";
-
 function AboutHero() {
   return (
     <div className="min-h-screen min-w-screen mt-13 ">
@@ -15,7 +13,11 @@ function AboutHero() {
         </div>
         {/* right section  */}
         <div className="flex justify-center items-center flex-col ">
-            <img src="../../src/assets/images/mahadev1.jpg" alt="test" className=" aspect-auto rounded-4xl" />
+            <img
+              src="/images/mahadev1.jpg"
+              alt="Mahadev"
+              className="aspect-auto rounded-4xl"
+            />
           <p>
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Expedita
             accusantium at possimus harum ducimus, ad, ullam doloremque saepe
