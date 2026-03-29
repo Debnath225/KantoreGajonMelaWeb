@@ -1,11 +1,13 @@
-import React from 'react'
+import AboutHero from "@/components/common/AboutHero";
+import Navbar from "@/components/common/Navbar";
 
 function About() {
   return (
-    <div>
-      
+    <div >
+      <Navbar />
+      <AboutHero/>
     </div>
-  )
+  );
 }
 
-export default About
+export default About;

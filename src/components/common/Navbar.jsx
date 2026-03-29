@@ -4,9 +4,11 @@ export default function Navbar() {
   return (
     <nav className="realtive w-full p-4 flex justify-center ">
       <motion.div
-      animate={{backgroundSize:['100% 100%', '50% 50%', '0% 0%']}}
-      transition={{duration:2,Infinity}}
-      className="fixed bg-black z-1000 md:h-10 md:w-100 flex justify-center items-center rounded-full px-6 border-2 border-x-indigo-500 border-y-cyan-500 ">
+        initial={{ y: -900 }}
+        animate={{ y: 0, backgroundSize: ["100% 100%", "50% 50%", "0% 0%"] }}
+        transition={{ duration: 1 }}
+        className="fixed bg-black z-1000 md:h-10 md:w-100 flex justify-center items-center rounded-full px-6 border-2 border-x-indigo-500 border-y-cyan-500 "
+      >
         <div className=" m-0 p-0  inline-flex items-center gap-2  overflow-hidden">
           <motion.span
             animate={{ opacity: 1, y: [80, 0, -80], scale: [0, 1.2, 0] }}

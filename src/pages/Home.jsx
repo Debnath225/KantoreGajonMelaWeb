@@ -1,6 +1,7 @@
 import Background from "@/components/common/Background";
 import ContactMe from "@/components/common/ContactMe";
 import CTA from "@/components/common/CTA";
+import ExploreKantore from "@/components/common/ExploreKantore";
 import FAQSection from "@/components/common/FAQSection";
 import Footer from "@/components/common/Footer";
 import Hero from "@/components/common/Hero";
@@ -15,6 +16,7 @@ export default function Home() {
 
       <Navbar />
       <Hero />
+      <ExploreKantore />
       <CTA />
       <Map />
       <FAQSection />

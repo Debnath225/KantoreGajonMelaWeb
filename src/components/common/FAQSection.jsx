@@ -10,20 +10,21 @@ const FAQSection = () => {
   const faqs = faqData[lang];
   const ITEMS_COUNT = 5;
   const [showAll, setShowAll] = useState(false);
-  const [text, setText] = useState("F.A.Q");
-  const [width, setWidth] = useState(0);
+  const [width, setWidth] = useState(
+    typeof window === "undefined" ? 1024 : window.innerWidth
+  );
+
   useEffect(() => {
-    setWidth(window.innerWidth);
-    if (width > 480) {
-      setText("Frequently Asked Questions (F.A.Q)");
-    }
-  }, [width]);
+    const updateWidth = () => setWidth(window.innerWidth);
+    window.addEventListener("resize", updateWidth);
+    return () => window.removeEventListener("resize", updateWidth);
+  }, []);
+
+  const text = width > 480 ? "Frequently Asked Questions (F.A.Q)" : "F.A.Q";
   const words = text.split(" ");
 
-  const handelSee = () => {};
-
   return (
-    <section className="container mx-auto p-4 md:p-8">
+    <section id="faqSection" className="container mx-auto p-4 md:p-8">
       <div className="flex justify-center items-center">
         {words.map((letter, i) => (
           <motion.h2

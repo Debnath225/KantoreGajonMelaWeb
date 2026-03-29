@@ -1,4 +1,5 @@
 import Mahadev from "../../assets/images/mahadev4.png";
+import { motion } from "framer-motion";
 function ProjectCard() {
   const date = new Date();
   const projectsData = {
@@ -17,13 +18,16 @@ function ProjectCard() {
       "Famer Motion",
       "Lenis",
     ],
-    githubLink: "https://github.com/debnath225/",
+    githubLink: "https://github.com/Debnath225/KantoreGajonMalaWeb",
   };
 
   return (
-    <div>
+    <motion.div
+      initial={{ scale: 0, opacity: 0 }}
+      whileInView={{ scale: 1, opacity: 1 }}
+    >
       {/* <!-- Project Card 1 --> */}
-      <div className="group relative bg-slate-800 rounded-2xl overflow-hidden border border-slate-700 hover:border-blue-500/50 transition-all duration-300 hover:shadow-2xl hover:shadow-blue-500/10">
+      <div className="group relative w-full h-full bg-slate-800 rounded-2xl overflow-hidden  transition-all duration-300 hover:shadow-2xl hover:shadow-blue-500/10">
         {/* <!-- Project Image --> */}
         <div className="relative h-56 overflow-hidden">
           <img
@@ -44,9 +48,9 @@ function ProjectCard() {
                 viewBox="0 0 24 24"
               >
                 <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
                   d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
                 ></path>
               </svg>
@@ -65,23 +69,30 @@ function ProjectCard() {
         {/* <!-- Project Content --> */}
         <div className="p-6 space-y-4">
           <div className="flex justify-between items-start">
-            <h4 className="text-xl text-gray-500 font-bold group-hover:text-blue-400 transition-colors">
+            <h4 className="text-xl md:text-gray-500 font-bold text-cyan-400 md:group-hover:text-cyan-400 transition-colors">
               {projectsData.projectName}
             </h4>
             <span className="text-xs font-mono bg-blue-500/10 text-blue-400 px-2 py-1 rounded">
               {projectsData.year}
             </span>
           </div>
-          <p className="text-slate-400 text-sm leading-relaxed">
+          <p className="text-slate-400 hover:text-slate-300/80 text-sm leading-relaxed">
             {projectsData.projectDescription}
           </p>
+
           {/* <!-- Tags --> */}
+          {/* Tags Hading  */}
+          <div className="flex">
+            <h2 className="text-xl text-cyan-400 md:text-slate-400 md:hover:text-cyan-400">
+              Used Tech
+            </h2>
+          </div>
           <div className="flex flex-wrap gap-2 pt-2">
             {projectsData.usedTech.map((tech) => {
               return (
                 <span
                   key={tech}
-                  className="text-[10px] uppercase tracking-wider font-bold text-slate-500 border border-slate-700 px-2 py-1 rounded"
+                  className="text-[10px] uppercase tracking-wider font-bold text-slate-500 hover:text-cyan-300 border border-cyan-600 px-2 py-1 rounded cursor-pointer"
                 >
                   {tech}
                 </span>
@@ -92,7 +103,7 @@ function ProjectCard() {
       </div>
 
       {/* <!-- More Project Cards can be added here following the same structure --> */}
-    </div>
+    </motion.div>
   );
 }
 
