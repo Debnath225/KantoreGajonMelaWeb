@@ -13,11 +13,13 @@ function AboutHero() {
         </div>
         {/* right section  */}
         <div className="flex justify-center items-center flex-col ">
-            <img
-              src="/images/mahadev1.jpg"
-              alt="Mahadev"
-              className="aspect-auto rounded-4xl"
-            />
+          <img
+            src="/images/mahadev1.jpg"
+            alt="Mahadev"
+            className="aspect-auto rounded-4xl"
+            width="4096"
+            height="4096"
+          />
           <p>
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Expedita
             accusantium at possimus harum ducimus, ad, ullam doloremque saepe
