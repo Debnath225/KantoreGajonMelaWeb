@@ -5,7 +5,10 @@ import helmet from "helmet";
 import hpp from "hpp";
 import morgan from "morgan";
 import { env } from "./config/env.js";
-import { burstSlowDown, globalRateLimiter } from "./middlewares/rateLimiters.js";
+import {
+  burstSlowDown,
+  globalRateLimiter,
+} from "./middlewares/rateLimiters.js";
 import { errorHandler, notFoundHandler } from "./middlewares/errorHandler.js";
 import { sanitizeInput } from "./middlewares/sanitizeInput.js";
 import publicRoutes from "./routes/publicRoutes.js";
@@ -19,12 +22,7 @@ app.disable("x-powered-by");
 
 app.use(
   cors({
-    origin(origin, callback) {
-      if (!origin) return callback(null, true);
-      const allowlist = env.clientOrigin.split(",").map((item) => item.trim());
-      if (allowlist.includes(origin)) return callback(null, true);
-      return callback(new Error("CORS not allowed"));
-    },
+    origin: env.clientOrigin,
     methods: ["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"],
     allowedHeaders: ["Content-Type", "x-api-key", "Authorization"],
     credentials: false,

@@ -9,6 +9,7 @@ const required = [
   "CLOUDINARY_CLOUD_NAME",
   "CLOUDINARY_API_KEY",
   "CLOUDINARY_API_SECRET",
+  // "VITE_API_BASE_URL",
 ];
 
 for (const key of required) {
@@ -29,5 +30,6 @@ export const env = {
   cloudinaryApiKey: process.env.CLOUDINARY_API_KEY,
   cloudinaryApiSecret: process.env.CLOUDINARY_API_SECRET,
   cloudinaryUploadFolder: process.env.CLOUDINARY_UPLOAD_FOLDER || "kantore",
+  // viteapibaseurl: process.env.VITE_API_BASE_URL || "http://localhost:5173/",
   isProd: (process.env.NODE_ENV || "development") === "production",
 };
