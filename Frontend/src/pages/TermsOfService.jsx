@@ -7,7 +7,7 @@ export default function TermsOfService() {
     <main className="app-shell overflow-x-hidden min-h-screen">
       <SEO
         title="Terms of Service"
-        description="Read the terms and conditions for using the Kantore Gajon Mala website and its content."
+        description="Read the terms and conditions for using the Kantore Gajon Mela website and its content."
         path="/terms-of-service"
       />
       <Navbar />
@@ -33,4 +33,3 @@ export default function TermsOfService() {
     </main>
   );
 }
-

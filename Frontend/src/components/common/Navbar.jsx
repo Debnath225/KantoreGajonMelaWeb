@@ -61,7 +61,8 @@ export default function Navbar() {
       const section = document.getElementById(id);
       attempts += 1;
       if (section) {
-        const top = section.getBoundingClientRect().top + window.scrollY - offset;
+        const top =
+          section.getBoundingClientRect().top + window.scrollY - offset;
         window.scrollTo({ top, behavior: "smooth" });
         return;
       }
@@ -99,7 +100,7 @@ export default function Navbar() {
                 className="h-8 w-9 object-contain"
               />
               <span className="typo-small sm:!text-base md:!text-lg !font-semibold text-white truncate">
-                Kantore Gajon Mala
+                Kantore Gajon Mela
               </span>
             </Link>
 

@@ -63,7 +63,7 @@ export default function ImageLightbox() {
       role="dialog"
       aria-modal="true"
       aria-label="Image preview"
-      className="fixed inset-0 z-[4000] bg-black/90 backdrop-blur-sm flex items-center justify-center p-4 sm:p-6"
+      className="fixed inset-0 z-[4000] bg-black/90 backdrop-blur-sm flex items-center justify-center p-15 sm:p-6"
       onClick={() => setActiveImage(null)}
     >
       <button
@@ -76,7 +76,7 @@ export default function ImageLightbox() {
       <img
         src={activeImage.src}
         alt={activeImage.alt}
-        className=" object-contain rounded-2xl border border-white/20 shadow-2xl"
+        className=" object-contain max-w-[80vw] max-h-[90vh] rounded-xl border border-white/20 shadow-2xl"
         onClick={(event) => event.stopPropagation()}
       />
     </div>,

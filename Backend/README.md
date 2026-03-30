@@ -1,8 +1,9 @@
 # Kantore Backend API
 
-Secure REST API for the Kantore Gajon Mala project.
+Secure REST API for the Kantore Gajon Mela project.
 
 ## Features
+
 - Express + MongoDB (Mongoose)
 - Security middleware: `helmet`, `cors` allowlist, `hpp`, payload limits
 - Global and strict write rate limiting
@@ -12,6 +13,7 @@ Secure REST API for the Kantore Gajon Mala project.
 - Cloudinary signed uploads for secure media management
 
 ## Quick Start
+
 1. Copy env file:
    - `cp .env.example .env`
 2. Fill `.env` values, especially `MONGO_URI` and `ADMIN_API_KEY`.
@@ -23,6 +25,7 @@ Secure REST API for the Kantore Gajon Mala project.
 API base: `http://localhost:8080/api/v1`
 
 ## Public Endpoints
+
 - `GET /health`
 - `GET /events?page=1&limit=12`
 - `GET /gallery?page=1&limit=12`
@@ -33,12 +36,15 @@ API base: `http://localhost:8080/api/v1`
 - `POST /media/sign-upload` (requires `Authorization: Bearer <token>`)
 
 ## Auth Endpoints
+
 - `POST /auth/signup`
 - `POST /auth/login`
 - `GET /auth/me` (requires `Authorization: Bearer <token>`)
 
 ## Admin Endpoints
+
 Send one of:
+
 - `x-api-key: <ADMIN_API_KEY>`
 - `Authorization: Bearer <admin_jwt_token>`
 
@@ -65,4 +71,5 @@ Send one of:
   - `POST /admin/media/sign-upload` (returns Cloudinary signature payload)
 
 ## Test Route Protection
+
 - `npm test`

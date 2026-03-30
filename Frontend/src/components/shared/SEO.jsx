@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 
-const SITE_NAME = "Kantore Gajon Mala";
-const SITE_URL = "https://kantore-gajon-mala-web.vercel.app";
+const SITE_NAME = "Kantore Gajon Mela";
+const SITE_URL = "https://kantore-gajon-Mela-web.vercel.app";
 const DEFAULT_IMAGE = `${SITE_URL}/images/AC-2026-001.webp`;
 
 function setOrCreateMeta(selector, attributes) {

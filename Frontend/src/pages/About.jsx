@@ -7,8 +7,8 @@ function About() {
   return (
     <main className="app-shell overflow-x-hidden">
       <SEO
-        title="About Kantore Gajon Mala"
-        description="Learn about the heritage, devotion, and spiritual significance of Kantore Gajon Mala and Kantore Shiv Mandir."
+        title="About Kantore Gajon Mela"
+        description="Learn about the heritage, devotion, and spiritual significance of Kantore Gajon Mela and Kantore Shiv Mandir."
         path="/about"
         image="/images/AC-2026-004.webp"
       />
@@ -20,4 +20,3 @@ function About() {
 }
 
 export default About;
-

@@ -3,10 +3,10 @@ function ProjectCard() {
   const date = new Date();
   const projectsData = {
     id: "1",
-    projectName: "Kantore Gajon Mala",
+    projectName: "Kantore Gajon Mela",
     year: date.getFullYear(),
     projectDescription:
-      "Full-stack App to Showcase My Village Gajon Mala's Some Moments and  Help User to Know About Baba Kantorenath .",
+      "Full-stack App to Showcase My Village Gajon Mela's Some Moments and  Help User to Know About Baba Kantorenath .",
     usedTech: [
       "React",
       "Node.js",
@@ -17,7 +17,7 @@ function ProjectCard() {
       "Famer Motion",
       "Lenis",
     ],
-    githubLink: "https://github.com/Debnath225/KantoreGajonMalaWeb",
+    githubLink: "https://github.com/Debnath225/KantoreGajonMelaWeb",
   };
 
   return (
@@ -32,7 +32,7 @@ function ProjectCard() {
         <div className="relative aspect-[16/10] overflow-hidden">
           <img
             src="/images/AC-2026-002.webp"
-            alt="Project:-Kantore Gajon Mala(Kantore2026)"
+            alt="Project:-Kantore Gajon Mela(Kantore2026)"
             loading="lazy"
             decoding="async"
             className="block w-full h-full object-cover object-center group-hover:scale-110 transition-transform duration-500"
@@ -91,9 +91,7 @@ function ProjectCard() {
           {/* <!-- Tags --> */}
           {/* Tags Hading  */}
           <div className="flex">
-            <h2 className="typo-h3 text-cyan-200">
-              Used Tech
-            </h2>
+            <h2 className="typo-h3 text-cyan-200">Used Tech</h2>
           </div>
           <div className="flex flex-wrap gap-2 pt-2">
             {projectsData.usedTech.map((tech) => {

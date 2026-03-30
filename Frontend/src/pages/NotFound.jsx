@@ -6,7 +6,7 @@ const NotFound = () => {
     <div className="min-h-screen bg-slate-950 flex items-center justify-center overflow-hidden relative">
       <SEO
         title="Page Not Found"
-        description="The page you are looking for does not exist on the Kantore Gajon Mala website."
+        description="The page you are looking for does not exist on the Kantore Gajon Mela website."
         path="/404"
         noindex
       />

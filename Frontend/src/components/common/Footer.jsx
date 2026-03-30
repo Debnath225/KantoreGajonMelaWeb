@@ -24,7 +24,11 @@ export default function Footer() {
 
   const socialLinks = [
     { icon: FacebookImg, label: "Facebook", href: "https://www.facebook.com/" },
-    { icon: InstagramImg, label: "Instagram", href: "https://www.instagram.com/" },
+    {
+      icon: InstagramImg,
+      label: "Instagram",
+      href: "https://www.instagram.com/",
+    },
     { icon: TwitterImg, label: "X (Twitter)", href: "https://x.com/" },
   ];
 
@@ -45,9 +49,7 @@ export default function Footer() {
         <div className="rounded-3xl border border-amber-100/10 bg-black/35 backdrop-blur-md p-6 md:p-8">
           <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 pb-7 border-b border-amber-100/10">
             <div>
-              <h3 className="typo-h2 md:!text-4xl text-amber-50">
-                Gajon Mala
-              </h3>
+              <h3 className="typo-h2 md:!text-4xl text-amber-50">Gajon Mela</h3>
               <p className="typo-body text-amber-100/70 mt-3 max-w-xl">
                 Sacred Rudraksha and spiritual stories from Kantore. Walk the
                 path of devotion, culture, and celebration.
@@ -127,8 +129,8 @@ export default function Footer() {
                       <ul className="space-y-2 text-amber-200/75 text-sm">
                         <li className="flex items-center gap-2">
                           <Mail className="w-4 h-4 text-amber-400" />
-                          <a href="mailto:info@mahadeumala.com">
-                            info@mahadeumala.com
+                          <a href="mailto:info@mahadeuMela.com">
+                            info@mahadeuMela.com
                           </a>
                         </li>
                         <li className="flex items-center gap-2">
@@ -152,7 +154,11 @@ export default function Footer() {
                             aria-label={social.label}
                             className="w-9 h-9 rounded-full bg-amber-600/20 hover:bg-amber-600 flex items-center justify-center transition-colors duration-300"
                           >
-                            <img src={social.icon} alt={social.label} className="w-4 h-4" />
+                            <img
+                              src={social.icon}
+                              alt={social.label}
+                              className="w-4 h-4"
+                            />
                           </a>
                         ))}
                       </div>
@@ -164,107 +170,113 @@ export default function Footer() {
           </div>
 
           <div className="hidden md:grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-10 mt-8 md:mt-10">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-          >
-            <h4 className="text-lg text-amber-50 mb-4">Follow Us</h4>
-            <div className="flex gap-4">
-              {socialLinks.map((social, index) => (
-                <motion.a
-                  key={index}
-                  href={social.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label={social.label}
-                  whileHover={{ scale: 1.2, rotateZ: 10 }}
-                  className="w-10 h-10 rounded-full bg-amber-600/20 hover:bg-amber-600 flex items-center justify-center transition-colors duration-300"
-                >
-                  <img src={social.icon} alt={social.label} className="w-5 h-5" />
-                </motion.a>
-              ))}
-            </div>
-          </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+            >
+              <h4 className="text-lg text-amber-50 mb-4">Follow Us</h4>
+              <div className="flex gap-4">
+                {socialLinks.map((social, index) => (
+                  <motion.a
+                    key={index}
+                    href={social.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={social.label}
+                    whileHover={{ scale: 1.2, rotateZ: 10 }}
+                    className="w-10 h-10 rounded-full bg-amber-600/20 hover:bg-amber-600 flex items-center justify-center transition-colors duration-300"
+                  >
+                    <img
+                      src={social.icon}
+                      alt={social.label}
+                      className="w-5 h-5"
+                    />
+                  </motion.a>
+                ))}
+              </div>
+            </motion.div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.1 }}
-          >
-            <h4 className="text-xl text-amber-50 mb-4">Quick Links</h4>
-            <ul className="space-y-3">
-              {quickLinks.map((elem) => (
-                <li key={elem.to}>
-                  {elem.type === "route" ? (
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.1 }}
+            >
+              <h4 className="text-xl text-amber-50 mb-4">Quick Links</h4>
+              <ul className="space-y-3">
+                {quickLinks.map((elem) => (
+                  <li key={elem.to}>
+                    {elem.type === "route" ? (
+                      <Link
+                        to={elem.to}
+                        className="text-amber-200/70 hover:text-amber-400 transition-colors duration-300"
+                      >
+                        {elem.field}
+                      </Link>
+                    ) : (
+                      <a
+                        href={elem.to}
+                        className="text-amber-200/70 hover:text-amber-400 transition-colors duration-300"
+                      >
+                        {elem.field}
+                      </a>
+                    )}
+                  </li>
+                ))}
+              </ul>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.2 }}
+            >
+              <h4 className="text-xl text-amber-50 mb-4">Explore</h4>
+              <ul className="space-y-3">
+                {exploreLinks.map((elem) => (
+                  <li key={elem.field}>
                     <Link
                       to={elem.to}
                       className="text-amber-200/70 hover:text-amber-400 transition-colors duration-300"
                     >
                       {elem.field}
                     </Link>
-                  ) : (
-                    <a
-                      href={elem.to}
-                      className="text-amber-200/70 hover:text-amber-400 transition-colors duration-300"
-                    >
-                      {elem.field}
+                  </li>
+                ))}
+              </ul>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.3 }}
+            >
+              <h4 className="text-xl text-amber-50 mb-4">Contact</h4>
+              <ul className="space-y-3">
+                <li className="flex items-center gap-3 text-amber-200/70">
+                  <Mail className="w-5 h-5 text-amber-500" />
+                  <span>
+                    <a href="mailto:info@mahadeuMela.com">
+                      info@mahadeuMela.com
                     </a>
-                  )}
+                  </span>
                 </li>
-              ))}
-            </ul>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.2 }}
-          >
-            <h4 className="text-xl text-amber-50 mb-4">Explore</h4>
-            <ul className="space-y-3">
-              {exploreLinks.map((elem) => (
-                <li key={elem.field}>
-                  <Link
-                    to={elem.to}
-                    className="text-amber-200/70 hover:text-amber-400 transition-colors duration-300"
-                  >
-                    {elem.field}
-                  </Link>
+                <li className="flex items-center gap-3 text-amber-200/70">
+                  <Phone className="w-5 h-5 text-amber-500" />
+                  <span>
+                    <a href="tel:1234567890">+91 1234567890</a>
+                  </span>
                 </li>
-              ))}
-            </ul>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.3 }}
-          >
-            <h4 className="text-xl text-amber-50 mb-4">Contact</h4>
-            <ul className="space-y-3">
-              <li className="flex items-center gap-3 text-amber-200/70">
-                <Mail className="w-5 h-5 text-amber-500" />
-                <span>
-                  <a href="mailto:info@mahadeumala.com">info@mahadeumala.com</a>
-                </span>
-              </li>
-              <li className="flex items-center gap-3 text-amber-200/70">
-                <Phone className="w-5 h-5 text-amber-500" />
-                <span>
-                  <a href="tel:1234567890">+91 1234567890</a>
-                </span>
-              </li>
-              <li className="flex items-center gap-3 text-amber-200/70">
-                <MapPin className="w-5 h-5 text-amber-500" />
-                <span>Kantore, India (WB)</span>
-              </li>
-            </ul>
-          </motion.div>
-        </div>
+                <li className="flex items-center gap-3 text-amber-200/70">
+                  <MapPin className="w-5 h-5 text-amber-500" />
+                  <span>Kantore, India (WB)</span>
+                </li>
+              </ul>
+            </motion.div>
+          </div>
         </div>
 
         <motion.div
@@ -274,8 +286,9 @@ export default function Footer() {
           className="pt-7 text-center text-amber-200/60 text-sm"
         >
           <p>
-            &copy; {date.getFullYear()} <span className="text-amber-100">Gajon Mala</span>. All
-            rights reserved. Made with devotion.
+            &copy; {date.getFullYear()}{" "}
+            <span className="text-amber-100">Gajon Mela</span>. All rights
+            reserved. Made with devotion.
           </p>
         </motion.div>
       </div>

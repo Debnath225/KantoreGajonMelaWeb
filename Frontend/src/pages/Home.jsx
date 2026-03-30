@@ -9,16 +9,26 @@ import ScrollProgress from "@/components/shared/ScrollProgress";
 import SectionReveal from "@/components/shared/SectionReveal";
 import SEO from "@/components/shared/SEO";
 const StatsSection = lazy(() => import("@/components/sections/StatsSection"));
-const RitualHighlights = lazy(() => import("@/components/sections/RitualHighlights"));
-const NewsletterSection = lazy(() => import("@/components/sections/NewsletterSection"));
+const RitualHighlights = lazy(
+  () => import("@/components/sections/RitualHighlights"),
+);
+const NewsletterSection = lazy(
+  () => import("@/components/sections/NewsletterSection"),
+);
 
-const ExploreKantore = lazy(() => import("@/components/sections/ExploreKantore"));
+const ExploreKantore = lazy(
+  () => import("@/components/sections/ExploreKantore"),
+);
 const CTA = lazy(() => import("@/components/sections/CTA"));
 const Map = lazy(() => import("@/components/sections/Map"));
 const FAQSection = lazy(() => import("@/components/sections/FAQSection"));
 const TeamSection = lazy(() => import("@/components/sections/TeamSection"));
-const TimelineSection = lazy(() => import("@/components/sections/TimelineSection"));
-const UserMediaUpload = lazy(() => import("@/components/sections/UserMediaUpload"));
+const TimelineSection = lazy(
+  () => import("@/components/sections/TimelineSection"),
+);
+const UserMediaUpload = lazy(
+  () => import("@/components/sections/UserMediaUpload"),
+);
 
 function SectionSkeleton({ height = "h-48" }) {
   return (
@@ -39,17 +49,17 @@ export default function Home() {
       className="app-shell overflow-x-hidden"
     >
       <SEO
-        title="Kantore Gajon Mala 2026"
-        description="Official website of Kantore Gajon Mala with festival countdown, rituals, gallery, events, and contact details."
+        title="Kantore Gajon Mela 2026"
+        description="Official website of Kantore Gajon Mela with festival countdown, rituals, gallery, events, and contact details."
         path="/"
         image="/images/AC-2026-001.webp"
         jsonLd={{
           "@context": "https://schema.org",
           "@type": "WebPage",
-          name: "Kantore Gajon Mala 2026",
-          url: "https://kantore-gajon-mala-web.vercel.app/",
+          name: "Kantore Gajon Mela 2026",
+          url: "https://kantore-gajon-Mela-web.vercel.app/",
           description:
-            "Official website of Kantore Gajon Mala with festival countdown, rituals, gallery, events, and contact details.",
+            "Official website of Kantore Gajon Mela with festival countdown, rituals, gallery, events, and contact details.",
           inLanguage: "en-IN",
         }}
       />
@@ -118,4 +128,3 @@ export default function Home() {
     </motion.main>
   );
 }
-

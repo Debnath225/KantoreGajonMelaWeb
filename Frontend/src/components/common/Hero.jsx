@@ -28,7 +28,7 @@ function HeroTextOverlay({ isPlaying, isMuted, onTogglePlay, onToggleMute }) {
       </motion.span>
       <AnimatedText
         as="h1"
-        text="Kantore Gajon Mala 2026"
+        text="Kantore Gajon Mela 2026"
         className="typo-display text-white drop-shadow-lg !text-2xl sm:!text-3xl md:!text-5xl"
         delay={0.12}
         wordDelay={0.05}
@@ -93,14 +93,21 @@ function Hero() {
   // Enable lightweight mode on lower-powered/data-saving mobile devices.
   useEffect(() => {
     const mobileQuery = window.matchMedia("(max-width: 767px)");
-    const reducedMotionQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
+    const reducedMotionQuery = window.matchMedia(
+      "(prefers-reduced-motion: reduce)",
+    );
 
     const updateLiteMode = () => {
-      const connection = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
+      const connection =
+        navigator.connection ||
+        navigator.mozConnection ||
+        navigator.webkitConnection;
       const saveData = Boolean(connection?.saveData);
       const lowCpu = (navigator.hardwareConcurrency || 8) <= 4;
       const lowMemory = (navigator.deviceMemory || 8) <= 4;
-      const enable = mobileQuery.matches && (saveData || lowCpu || lowMemory || reducedMotionQuery.matches);
+      const enable =
+        mobileQuery.matches &&
+        (saveData || lowCpu || lowMemory || reducedMotionQuery.matches);
       setLiteMobileMode(enable);
     };
 

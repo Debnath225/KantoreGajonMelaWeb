@@ -31,7 +31,9 @@ export default function Gallery() {
         }
       } catch {
         if (!mounted) return;
-        setStatusMessage("Could not load live gallery. Showing curated images.");
+        setStatusMessage(
+          "Could not load live gallery. Showing curated images.",
+        );
       }
     }
     loadGallery();
@@ -44,16 +46,16 @@ export default function Gallery() {
     <main className="app-shell overflow-x-hidden min-h-screen">
       <SEO
         title="Festival Gallery"
-        description="Browse sacred visuals and memorable moments from Kantore Gajon Mala in the official gallery."
+        description="Browse sacred visuals and memorable moments from Kantore Gajon Mela in the official gallery."
         path="/gallery"
         image="/images/AC-2026-009.webp"
         jsonLd={{
           "@context": "https://schema.org",
           "@type": "ImageGallery",
-          name: "Kantore Gajon Mala Gallery",
-          url: "https://kantore-gajon-mala-web.vercel.app/gallery",
+          name: "Kantore Gajon Mela Gallery",
+          url: "https://kantore-gajon-Mela-web.vercel.app/gallery",
           description:
-            "Browse sacred visuals and memorable moments from Kantore Gajon Mala in the official gallery.",
+            "Browse sacred visuals and memorable moments from Kantore Gajon Mela in the official gallery.",
         }}
       />
       <Navbar />
@@ -63,10 +65,12 @@ export default function Gallery() {
             Festival Gallery
           </h1>
           <p className="typo-body text-center text-cyan-100/80 max-w-2xl mx-auto mb-10">
-            A collection of sacred frames from Kantore Gajon Mala.
+            A collection of sacred frames from Kantore Gajon Mela.
           </p>
           {statusMessage && (
-            <p className="text-center text-amber-300/90 mb-6">{statusMessage}</p>
+            <p className="text-center text-amber-300/90 mb-6">
+              {statusMessage}
+            </p>
           )}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
             {images.map((image) => (
@@ -97,4 +101,3 @@ export default function Gallery() {
     </main>
   );
 }
-

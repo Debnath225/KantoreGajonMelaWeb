@@ -5,7 +5,7 @@ function TeamSection() {
     {
       name: "Debnath Hati",
       role: "Founder & Developer",
-      bio: "Leads the digital storytelling of Kantore Gajon Mala and preserves community moments through tech.",
+      bio: "Leads the digital storytelling of Kantore Gajon Mela and preserves community moments through tech.",
       image: "/images/AC-2026-001.webp",
     },
     {
@@ -48,7 +48,9 @@ function TeamSection() {
               <h3 className="text-white text-lg md:text-xl font-semibold">
                 {member.name}
               </h3>
-              <p className="text-cyan-300 text-sm md:text-base mt-1">{member.role}</p>
+              <p className="text-cyan-300 text-sm md:text-base mt-1">
+                {member.role}
+              </p>
               <p className="text-gray-300 text-sm mt-3 leading-relaxed">
                 {member.bio}
               </p>

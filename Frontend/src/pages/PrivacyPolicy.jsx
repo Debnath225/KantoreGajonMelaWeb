@@ -7,7 +7,7 @@ export default function PrivacyPolicy() {
     <main className="app-shell overflow-x-hidden min-h-screen">
       <SEO
         title="Privacy Policy"
-        description="Read the privacy practices for the Kantore Gajon Mala website, including form data and cookie preferences."
+        description="Read the privacy practices for the Kantore Gajon Mela website, including form data and cookie preferences."
         path="/privacy-policy"
       />
       <Navbar />
@@ -17,7 +17,7 @@ export default function PrivacyPolicy() {
           <div className="typo-body space-y-4 text-gray-300">
             <p>
               We respect your privacy and only collect essential data needed to
-              improve your experience on the Kantore Gajon Mala website.
+              improve your experience on the Kantore Gajon Mela website.
             </p>
             <p>
               Personal information submitted through forms is used for
@@ -26,8 +26,8 @@ export default function PrivacyPolicy() {
             <p>
               This website also uses essential cookies for core functionality,
               and optional analytics/marketing cookies only with your consent.
-              You can change cookie preferences anytime from the Cookie
-              Settings button.
+              You can change cookie preferences anytime from the Cookie Settings
+              button.
             </p>
             <p>
               By using this website, you agree to this privacy policy and any
@@ -40,4 +40,3 @@ export default function PrivacyPolicy() {
     </main>
   );
 }
-

@@ -124,7 +124,7 @@ function AuthModal({ open, onClose, initialMode = "login" }) {
           </button>
         </div>
 
-        <div className="mt-4 grid grid-cols-2 gap-2 rounded-xl bg-black/40 p-1">
+        <div className="mt-4 grid grid-cols-2 gap-2  border-2 border-[#6495ed] rounded-xl bg-black/40 p-1">
           <button
             type="button"
             onClick={() => setMode("login")}

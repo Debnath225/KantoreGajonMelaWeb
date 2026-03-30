@@ -21,9 +21,9 @@ function AboutHero() {
               Preserving devotion through stories, culture, and community.
             </h1>
             <p className="text-gray-300 text-sm md:text-lg leading-relaxed mt-4">
-              Kantore Gajon Mala is more than a festival gallery. It is a
-              living archive of tradition where rituals, village life, and faith
-              are passed forward with care.
+              Kantore Gajon Mela is more than a festival gallery. It is a living
+              archive of tradition where rituals, village life, and faith are
+              passed forward with care.
             </p>
             <p className="text-gray-300 text-sm md:text-lg leading-relaxed mt-3">
               Our mission is to present this heritage in a respectful,

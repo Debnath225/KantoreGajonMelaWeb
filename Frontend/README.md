@@ -1,6 +1,6 @@
-﻿# Kantore Gajon Mala Web
+﻿# Kantore Gajon Mela Web
 
-A modern React + Vite website showcasing the culture, rituals, and community spirit of Kantore Gajon Mala.
+A modern React + Vite website showcasing the culture, rituals, and community spirit of Kantore Gajon Mela.
 
 ## Tech Stack
 
@@ -101,7 +101,7 @@ Already configured in this repo:
 
 After deployment, complete these steps:
 
-1. Google Search Console: add property and submit `https://kantore-gajon-mala-web.vercel.app/sitemap.xml`
+1. Google Search Console: add property and submit `https://kantore-gajon-Mela-web.vercel.app/sitemap.xml`
 2. Bing Webmaster Tools: add site and submit the same sitemap
 3. Yandex Webmaster (optional): add site and submit sitemap
 4. Replace verification placeholders in `index.html` with real tokens:

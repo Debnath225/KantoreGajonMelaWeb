@@ -7,7 +7,7 @@ export default function Support() {
     <main className="app-shell overflow-x-hidden min-h-screen">
       <SEO
         title="Support"
-        description="Get help for website access, festival information, and contact details for the Kantore Gajon Mala team."
+        description="Get help for website access, festival information, and contact details for the Kantore Gajon Mela team."
         path="/support"
       />
       <Navbar />
@@ -20,12 +20,18 @@ export default function Support() {
               feedback? We are here to support you.
             </p>
             <p>
-              Email us at <a className="text-cyan-300" href="mailto:info@mahadeumala.com">info@mahadeumala.com</a> or
-              call <a className="text-cyan-300" href="tel:1234567890"> +91 1234567890</a>.
+              Email us at{" "}
+              <a className="text-cyan-300" href="mailto:info@mahadeuMela.com">
+                info@mahadeuMela.com
+              </a>{" "}
+              or call{" "}
+              <a className="text-cyan-300" href="tel:1234567890">
+                {" "}
+                +91 1234567890
+              </a>
+              .
             </p>
-            <p>
-              We usually respond within 24-48 hours.
-            </p>
+            <p>We usually respond within 24-48 hours.</p>
           </div>
         </div>
       </section>
@@ -33,4 +39,3 @@ export default function Support() {
     </main>
   );
 }
-

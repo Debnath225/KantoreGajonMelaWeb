@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "type": "module",
-  "description": "Secure REST API for Kantore Gajon Mala",
+  "description": "Secure REST API for Kantore Gajon Mela",
   "main": "src/server.js",
   "scripts": {
     "dev": "nodemon src/server.js",

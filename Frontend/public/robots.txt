@@ -1,5 +1,5 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://kantore-gajon-mala-web.vercel.app/sitemap.xml
-Sitemap: https://kantore-gajon-mala-web.vercel.app/image-sitemap.xml
+Sitemap: https://kantore-gajon-Mela-web.vercel.app/sitemap.xml
+Sitemap: https://kantore-gajon-Mela-web.vercel.app/image-sitemap.xml

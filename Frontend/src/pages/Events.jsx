@@ -40,7 +40,9 @@ export default function Events() {
           setEvents(response.data);
           setError("");
         } else {
-          setError("Live events are not available yet. Showing upcoming highlights.");
+          setError(
+            "Live events are not available yet. Showing upcoming highlights.",
+          );
         }
       } catch {
         if (!mounted) return;
@@ -59,11 +61,14 @@ export default function Events() {
     () =>
       events.map((event) => ({
         ...event,
-        date: new Date(event.startAt || event.date).toLocaleDateString("en-IN", {
-          day: "2-digit",
-          month: "long",
-          year: "numeric",
-        }),
+        date: new Date(event.startAt || event.date).toLocaleDateString(
+          "en-IN",
+          {
+            day: "2-digit",
+            month: "long",
+            year: "numeric",
+          },
+        ),
       })),
     [events],
   );
@@ -72,18 +77,18 @@ export default function Events() {
     <main className="app-shell overflow-x-hidden min-h-screen">
       <SEO
         title="Festival Events"
-        description="See the full schedule of Kantore Gajon Mala events, including opening rituals, procession, and closing ceremony."
+        description="See the full schedule of Kantore Gajon Mela events, including opening rituals, procession, and closing ceremony."
         path="/events"
         image="/images/AC-2026-007.webp"
       />
       <Navbar />
       <section className="section-shell-with-nav">
         <div className="section-inner max-w-5xl">
-          <h1 className="typo-h1 text-center mb-10">
-            Events
-          </h1>
+          <h1 className="typo-h1 text-center mb-10">Events</h1>
           {loading && (
-            <p className="text-center text-cyan-200/80 mb-6">Loading events...</p>
+            <p className="text-center text-cyan-200/80 mb-6">
+              Loading events...
+            </p>
           )}
           {error && (
             <p className="text-center text-amber-300/90 mb-6">{error}</p>
@@ -111,4 +116,3 @@ export default function Events() {
     </main>
   );
 }
-

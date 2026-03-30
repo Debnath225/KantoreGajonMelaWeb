@@ -8,7 +8,7 @@ function CTA() {
   const [isHovered, setIsHovered] = useState(false);
 
   const titlePrimary = "Discover the Divine Essence of";
-  const titleAccent = "Kantore Gajon Mala";
+  const titleAccent = "Kantore Gajon Mela";
 
   return (
     <section className="section-shell w-full flex justify-center">
