@@ -84,5 +84,5 @@ export const mediaUploadSignatureSchema = z.object({
 });
 
 export const userMediaUploadSignatureSchema = z.object({
-  mediaType: z.enum(["image", "video", "auto"]).optional().default("auto"),
+  mediaType: z.enum(["image", "video", "auto"]).optional().default("image"),
 });

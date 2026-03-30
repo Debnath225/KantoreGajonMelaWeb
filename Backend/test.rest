@@ -1,4 +1,5 @@
-@baseUrl = http://localhost:8080
+@baseUrl = https://kantore-gajon-mala-h62lpdmgv-debnath225s-projects.vercel.app
+@actualUrl=https://kantore-gajon-mala-h62lpdmgv-debnath225s-projects.vercel.app/
 @apiUrl = {{baseUrl}}/api/v1
 @adminApiKey = replace_with_strong_secret_key
 @jwtToken = paste_jwt_after_login

@@ -3,10 +3,11 @@ import { connectDatabase } from "./config/db.js";
 import { env } from "./config/env.js";
 
 async function start() {
+  const PORT = env.port;
   await connectDatabase(env.mongoUri);
-  app.listen(env.port, () => {
+  app.listen(PORT, () => {
     // eslint-disable-next-line no-console
-    console.log(`API listening on http://localhost:${env.port}`);
+    console.log(`API listening on http://localhost:${PORT}`);
   });
 }
 

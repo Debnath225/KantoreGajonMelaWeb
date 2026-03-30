@@ -126,7 +126,7 @@ export default function UserMediaUpload() {
             <button
               type="button"
               onClick={() => setMediaType("image")}
-              className={`h-9 px-3 rounded-lg text-sm inline-flex items-center gap-1 ${
+              className={`h-9 px-3 cursor-pointer rounded-lg text-sm inline-flex items-center gap-1 ${
                 mediaType === "image"
                   ? "bg-cyan-500 text-black font-semibold"
                   : "text-cyan-100"
@@ -138,7 +138,7 @@ export default function UserMediaUpload() {
             <button
               type="button"
               onClick={() => setMediaType("video")}
-              className={`h-9 px-3 rounded-lg text-sm inline-flex items-center gap-1 ${
+              className={`h-9 px-3 cursor-pointer rounded-lg text-sm inline-flex items-center gap-1 ${
                 mediaType === "video"
                   ? "bg-cyan-500 text-black font-semibold"
                   : "text-cyan-100"
