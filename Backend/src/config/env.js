@@ -23,6 +23,7 @@ export const env = {
   port: Number(process.env.PORT || 8080),
   mongoUri: process.env.MONGO_URI,
   clientOrigin: process.env.CLIENT_ORIGIN || "http://localhost:5173",
+  clientOrigin2: process.env.CLIENT_ORIGIN2 || "http://localhost:5173",
   adminApiKey: process.env.ADMIN_API_KEY,
   jwtSecret: process.env.JWT_SECRET,
   jwtExpiresIn: process.env.JWT_EXPIRES_IN || "7d",
