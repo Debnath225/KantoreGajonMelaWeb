@@ -1,0 +1,210 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+@import "@fontsource-variable/geist";
+
+:root {
+  /* Typography */
+  --font-family-base: "Geist Variable", "Geist", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-family-heading: "Geist Variable", "Geist", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-family-mono: "JetBrains Mono", "Fira Code", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+
+  --fs-display: clamp(2rem, 3.8vw, 3.5rem);
+  --fs-h1: clamp(1.75rem, 3vw, 2.75rem);
+  --fs-h2: clamp(1.5rem, 2.4vw, 2.25rem);
+  --fs-h3: clamp(1.2rem, 1.8vw, 1.5rem);
+  --fs-body: clamp(0.95rem, 1.1vw, 1rem);
+  --fs-small: clamp(0.8rem, 1vw, 0.9rem);
+  --fs-micro: clamp(0.72rem, 0.9vw, 0.8rem);
+
+  --lh-tight: 1.2;
+  --lh-base: 1.6;
+  --lh-relaxed: 1.72;
+
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-semibold: 600;
+  --fw-bold: 700;
+  --fw-extrabold: 800;
+
+  --tracking-tight: -0.015em;
+  --tracking-normal: 0em;
+  --tracking-wide: 0.08em;
+
+  /* Layout */
+  --container-max: 80rem;
+  --section-px: clamp(1rem, 2.5vw, 2rem);
+  --section-py: clamp(2.5rem, 6vw, 4rem);
+  --section-py-tight: clamp(2rem, 4.2vw, 3rem);
+  --section-gap: clamp(0.75rem, 1.8vw, 1.25rem);
+  --nav-height: 3.5rem;
+  --nav-offset: calc(var(--nav-height) + 1.5rem);
+
+  /* Surface */
+  --radius-card: 1rem;
+  --radius-section: 1.5rem;
+  --border-soft: 1px solid rgb(255 255 255 / 0.1);
+
+  /* Brand */
+  --color-bg: #000000;
+  --color-fg: #ffffff;
+  --color-muted: rgb(207 219 245 / 0.78);
+  --color-primary: #22d3ee;
+  --color-primary-strong: #06b6d4;
+  --color-danger: #ef4444;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--font-family-base);
+  font-size: var(--fs-body);
+  font-weight: var(--fw-regular);
+  line-height: var(--lh-base);
+  letter-spacing: var(--tracking-normal);
+  background: var(--color-bg);
+  color: var(--color-fg);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-family-heading);
+  font-weight: var(--fw-bold);
+  line-height: var(--lh-tight);
+  letter-spacing: var(--tracking-tight);
+}
+
+p,
+li {
+  line-height: var(--lh-relaxed);
+}
+
+a,
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+code,
+pre,
+kbd,
+samp {
+  font-family: var(--font-family-mono);
+}
+
+.app-shell {
+  background: var(--color-bg);
+  color: var(--color-fg);
+  overflow: hidden;
+}
+
+.section-shell {
+  padding-inline: var(--section-px);
+  padding-block: var(--section-py);
+}
+
+.section-shell-tight {
+  padding-inline: var(--section-px);
+  padding-block: var(--section-py-tight);
+}
+
+.section-inner {
+  width: min(100%, var(--container-max));
+  margin-inline: auto;
+}
+
+.section-shell-with-nav {
+  padding-inline: var(--section-px);
+  padding-top: var(--nav-offset);
+  padding-bottom: var(--section-py-tight);
+}
+
+.section-title {
+  font-size: var(--fs-h2);
+  line-height: var(--lh-tight);
+  font-weight: var(--fw-bold);
+  letter-spacing: var(--tracking-tight);
+}
+
+.section-subtitle {
+  font-size: var(--fs-body);
+  font-weight: var(--fw-regular);
+  color: var(--color-muted);
+}
+
+.typo-display {
+  font-size: var(--fs-display);
+  line-height: var(--lh-tight);
+  font-weight: var(--fw-extrabold);
+  letter-spacing: var(--tracking-tight);
+}
+
+.typo-h1 {
+  font-size: var(--fs-h1);
+  line-height: var(--lh-tight);
+  font-weight: var(--fw-bold);
+}
+
+.typo-h2 {
+  font-size: var(--fs-h2);
+  line-height: var(--lh-tight);
+  font-weight: var(--fw-bold);
+}
+
+.typo-h3 {
+  font-size: var(--fs-h3);
+  line-height: 1.35;
+  font-weight: var(--fw-semibold);
+}
+
+.typo-body {
+  font-size: var(--fs-body);
+  line-height: var(--lh-relaxed);
+  font-weight: var(--fw-regular);
+}
+
+.typo-small {
+  font-size: var(--fs-small);
+  line-height: 1.55;
+  font-weight: var(--fw-medium);
+}
+
+.typo-micro {
+  font-size: var(--fs-micro);
+  line-height: 1.4;
+  font-weight: var(--fw-medium);
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+}
+
+.text-muted {
+  color: var(--color-muted);
+}
+
+.card-surface {
+  border: var(--border-soft);
+  border-radius: var(--radius-card);
+}
+
+.cv-auto {
+  content-visibility: auto;
+  contain-intrinsic-size: 900px;
+}
+
+img {
+  cursor: zoom-in;
+}

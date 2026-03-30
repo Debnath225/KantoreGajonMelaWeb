@@ -1,0 +1,78 @@
+import { motion } from "framer-motion";
+import { MapPin } from "lucide-react";
+import { useEffect, useState } from "react";
+
+function Map() {
+  const [width, setWidth] = useState(
+    typeof window === "undefined" ? 1024 : window.innerWidth,
+  );
+
+  useEffect(() => {
+    const updateWidth = () => setWidth(window.innerWidth);
+    window.addEventListener("resize", updateWidth);
+    return () => window.removeEventListener("resize", updateWidth);
+  }, []);
+
+  return (
+    <section
+      className="section-shell bg-gradient-to-b from-black to-gray-900"
+      aria-labelledby="map-title"
+    >
+      <h2 id="map-title" className="sr-only">
+        Map Section
+      </h2>
+
+      <motion.div
+        initial={{ opacity: 0, y: -40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6, ease: "easeIn" }}
+        className="section-inner text-center mb-10"
+      >
+        <h4 className="text-2xl sm:text-3xl md:text-4xl font-bold text-cyan-400 flex items-center justify-center gap-2">
+          <MapPin className="text-cyan-400" />
+          {width > 480 ? "Located At Kantore Shiv Mandir" : "Get Location"}
+        </h4>
+        <p className="text-gray-400 mt-2 text-sm md:text-base">
+          Visit the sacred place of Mahadev and experience divine peace
+        </p>
+      </motion.div>
+
+      <motion.div
+        initial={{ opacity: 0, scale: 0.95 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.5 }}
+        className="section-inner relative max-w-5xl rounded-3xl overflow-hidden shadow-2xl border border-cyan-500/20"
+      >
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1333.6858068108345!2d87.19192797882461!3d22.881688257704834!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f7c100256619df%3A0x4b5f2f4a8aedaef1!2sShree%20Shree%20Kantornath%20Mahadev%20Jiur%20Toron!5e1!3m2!1sen!2sin!4v1774805918908!5m2!1sen!2sin"
+          className="w-full h-[300px] md:h-[500px] border-0"
+          loading="lazy"
+          referrerPolicy="no-referrer-when-downgrade"
+          title="Kantore Shiv Mandir Location"
+        />
+
+        <div className="absolute bottom-4 left-4 right-4 md:left-6 md:right-auto bg-black/70 backdrop-blur-md p-4 rounded-xl border border-cyan-400/30">
+          <h5 className="text-white font-semibold text-lg">
+            Kantore Shiv Mandir
+          </h5>
+          <p className="text-gray-300 text-sm">
+            A sacred place of Lord Shiva where devotion meets peace
+          </p>
+
+          <a
+            href="https://maps.app.goo.gl/W2UE7zCCcJwKFj3u8"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block mt-2 text-sm text-cyan-400 hover:underline"
+          >
+            Open in Google Maps {"->"}
+          </a>
+        </div>
+      </motion.div>
+    </section>
+  );
+}
+
+export default Map;
