@@ -76,7 +76,7 @@ export default function ImageLightbox() {
       <img
         src={activeImage.src}
         alt={activeImage.alt}
-        className=" object-contain max-w-[80vw] max-h-[90vh] rounded-xl border border-white/20 shadow-2xl"
+        className=" object-contain max-w-[100vw] max-h-[95vh] md:max-w-[80vw] md:max-h-[90vh] rounded-xl border border-white/20 shadow-2xl"
         onClick={(event) => event.stopPropagation()}
       />
     </div>,
